@@ -753,7 +753,7 @@ function createLauncher() {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      backgroundThrottling: false
+      backgroundThrottling: true
     }
   });
 
@@ -1929,7 +1929,7 @@ function launchGameWithProfile(name) {
     frame: !!profile.frame,
     icon: 'icon.png',
     webPreferences: {
-      backgroundThrottling: false,
+      backgroundThrottling: true,
       partition: part,
       nativeWindowOpen: true
     }
@@ -2020,7 +2020,7 @@ function launchGameWithProfile(name) {
         height: 700,
         webPreferences: {
           partition: part,
-          backgroundThrottling: false
+          backgroundThrottling: true
         }
       }
     };
@@ -2610,7 +2610,7 @@ ipcMain.handle('ui:about', async () => {
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
-      backgroundThrottling: false,
+      backgroundThrottling: true,
     },
   });
 
